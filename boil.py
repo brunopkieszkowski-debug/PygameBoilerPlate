@@ -21,39 +21,14 @@ Big_font = pygame.font.Font("freesansbold.ttf", 60)
 clock = pygame.time.Clock()
 winw, winh = 900, 700
 win = pygame.display.set_mode((winw,winh))
-pygame.display.set_caption("FlappyBird")
+pygame.display.set_caption("GameTitle")
 
 #images
-bloop = pygame.image.load('/home/bronu/pythons/pygame/sprites/Bloop.png').convert_alpha()
 
 
 #Vars
-squidx = 80
-squidy = 100
 
 #Classes
-bloops = []
-class Bloop:
-    def __init__(self, color, x, y, size):
-        self.color = color
-        self.x = x
-        self.y = y
-        self.size = size
-
-    def draw(self):
-        self.rect=pygame.draw.rect(win, self.color,((self.x,self.y),self.size))
-
-    def move(self):
-        self.y += 1.5
-
-for count in range(5):
-    for count in range(8):
-        blooprect = back
-        bloopsize = (50,50)
-        bloops.append(Bloop(blooprect,squidx, squidy, bloopsize))
-        squidx += 100
-    squidx = 80
-    squidy += 100
 
 #Shapes
 
@@ -69,10 +44,7 @@ while run:
 
 
 
-    for Bloop in bloops:
-        Bloop.draw()
-        win.blit(bloop, ((Bloop.x-10),Bloop.y))
-        #Bloop.move()
+
     pygame.display.update()
     clock.tick(60)
     win.fill(back)
